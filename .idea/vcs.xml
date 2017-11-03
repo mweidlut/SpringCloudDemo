@@ -2,9 +2,5 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/EurekaClient1" vcs="svn" />
-    <mapping directory="$PROJECT_DIR$/EurekaClient2" vcs="svn" />
-    <mapping directory="$PROJECT_DIR$/EurekaServer1" vcs="svn" />
-    <mapping directory="$PROJECT_DIR$/EurekaServer2" vcs="svn" />
   </component>
 </project>
