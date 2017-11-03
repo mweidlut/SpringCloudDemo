@@ -6,12 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-cloud-demo" />
+        <module name="spring-cloud-root" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="EurekaServer" target="1.8" />
-      <module name="spring-cloud-demo" target="1.8" />
+      <module name="spring-cloud-root" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
