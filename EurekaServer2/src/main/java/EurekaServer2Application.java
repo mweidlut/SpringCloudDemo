@@ -10,10 +10,10 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("org.test.cloud")
 @EnableEurekaServer
 @SpringCloudApplication
-public class EurekaServerApplication {
+public class EurekaServer2Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServerApplication.class, args);
+        SpringApplication.run(EurekaServer2Application.class, args);
     }
 
 

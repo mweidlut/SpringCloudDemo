@@ -6,12 +6,12 @@
 
     <parent>
         <groupId>org.test.cloud</groupId>
-		<artifactId>spring-cloud-root</artifactId>
+        <artifactId>spring-cloud-root</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-	<artifactId>eureka-server-1</artifactId>
+    <artifactId>eureka-client-1</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
@@ -32,7 +32,8 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
-		
-    </dependencies>    
+
+    </dependencies>
+
 
 </project>
