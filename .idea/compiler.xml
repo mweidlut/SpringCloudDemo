@@ -4,6 +4,7 @@
     <bytecodeTargetLevel>
       <module name="eureka-client-1" target="1.8" />
       <module name="eureka-client-2" target="1.8" />
+      <module name="eureka-ribbon-lb" target="1.8" />
       <module name="eureka-server-1" target="1.8" />
       <module name="eureka-server-2" target="1.8" />
       <module name="spring-cloud-root" target="1.8" />
