@@ -28,7 +28,7 @@ public class PersonService1Controller {
         ServiceInstance instance = client.getLocalServiceInstance();
         String  r = "Hello " + lastname + " " + firstname + "!";
 
-        logger.info("/person, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r);
+        logger.info("/person, host:{}, service_id:{}, result:{}", instance.getHost(), instance.getServiceId(), r);
 
         return "From Person Service, Result is " + r;
     }
