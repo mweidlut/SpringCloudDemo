@@ -27,6 +27,7 @@
         <module>EurekaClient1</module>
         <module>EurekaClient2</module>
 		<module>EurekaRibbonLB</module>
+		<module>EurekaFeignLB</module>
     </modules>
 
     <dependencyManagement>

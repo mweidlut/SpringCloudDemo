@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/EurekaFeignLB/EurekaFeignLB.iml" filepath="$PROJECT_DIR$/EurekaFeignLB/EurekaFeignLB.iml" />
       <module fileurl="file://$PROJECT_DIR$/EurekaClient1/eureka-client-1.iml" filepath="$PROJECT_DIR$/EurekaClient1/eureka-client-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/EurekaClient2/eureka-client-2.iml" filepath="$PROJECT_DIR$/EurekaClient2/eureka-client-2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EurekaFeignLB/eureka-feign-lb.iml" filepath="$PROJECT_DIR$/EurekaFeignLB/eureka-feign-lb.iml" />
       <module fileurl="file://$PROJECT_DIR$/EurekaRibbonLB/eureka-ribbon-lb.iml" filepath="$PROJECT_DIR$/EurekaRibbonLB/eureka-ribbon-lb.iml" />
       <module fileurl="file://$PROJECT_DIR$/EurekaServer1/eureka-server-1.iml" filepath="$PROJECT_DIR$/EurekaServer1/eureka-server-1.iml" />
       <module fileurl="file://$PROJECT_DIR$/EurekaServer2/eureka-server-2.iml" filepath="$PROJECT_DIR$/EurekaServer2/eureka-server-2.iml" />
