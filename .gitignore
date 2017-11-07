@@ -3,3 +3,4 @@
 /EurekaServer1/target
 /EurekaServer2/target
 /EurekaRibbonLB/target
+/EurekaFeignLB/target

@@ -14,7 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableFeignClients
 public class EurekaFeignLBApplication {
 
-    public void main(String[] args){
+    public static void main(String[] args){
         SpringApplication.run(EurekaFeignLBApplication.class, args);
     }
 
