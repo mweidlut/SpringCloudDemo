@@ -4,3 +4,11 @@
 /EurekaServer2/target
 /EurekaRibbonLB/target
 /EurekaFeignLB/target
+/.idea
+/spring-cloud-root.iml
+/EurekaServer2/eureka-server-2.iml
+/EurekaServer1/eureka-server-1.iml
+/EurekaRibbonLB/eureka-ribbon-lb.iml
+/EurekaFeignLB/eureka-feign-lb.iml
+/EurekaClient2/eureka-client-2.iml
+/EurekaClient1/eureka-client-1.iml
