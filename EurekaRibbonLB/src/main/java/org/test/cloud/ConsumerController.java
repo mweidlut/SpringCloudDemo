@@ -1,5 +1,6 @@
 package org.test.cloud;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,6 +21,8 @@ public class ConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
+
+    @HystrixCommand(fallbackMethod = "personServiceFallback")
     @RequestMapping(value = "/person", method = RequestMethod.GET)
     public String person(@NotNull @RequestParam String firstname,
                          @NotNull @RequestParam String lastname) {
@@ -29,5 +32,9 @@ public class ConsumerController {
 
         return restTemplate.getForEntity(urlWithParam, String.class)
                 .getBody();
+    }
+
+    public String personServiceFallback(String firstname, String lastname) {
+        return "Error: can not find "+firstname+" "+ lastname;
     }
 }
