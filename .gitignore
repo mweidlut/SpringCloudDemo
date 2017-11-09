@@ -14,3 +14,5 @@
 /EurekaClient1/eureka-client-1.iml
 /ZuulServiceGateway/zuul-service-gateway.iml
 /EurekaClient3/eureka-client-3.iml
+/EurekaClient3/target
+/ZuulServiceGateway/target
