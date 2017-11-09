@@ -10,9 +10,9 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("org.test.cloud")
 @EnableDiscoveryClient
 @SpringCloudApplication
-public class EurekaClient1Application {
+public class EurekaClient3Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaClient1Application.class, args);
+        SpringApplication.run(EurekaClient3Application.class, args);
     }
 }

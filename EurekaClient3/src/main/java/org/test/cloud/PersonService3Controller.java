@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * Date: 2017/11/4 0:13
  */
 @RestController
-public class PersonService1Controller {
+public class PersonService3Controller {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 

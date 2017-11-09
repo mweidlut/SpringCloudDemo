@@ -1,18 +1,20 @@
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * User: ROOT
  * Date: 2017/11/9 23:37
  */
+@ComponentScan("org.test.cloud")
 @SpringCloudApplication
 @EnableZuulProxy
 public class ZuulGatewayApplication {
 
     public static void main(String[] args) {
-        //SpringApplication.run(ZuulGatewayApplication.class, args);
-        new SpringApplicationBuilder(ZuulGatewayApplication.class).web(true).run(args);
+        SpringApplication.run(ZuulGatewayApplication.class, args);
     }
 
 }
