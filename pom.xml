@@ -26,8 +26,10 @@
         <module>EurekaServer2</module>
         <module>EurekaClient1</module>
         <module>EurekaClient2</module>
-		<module>EurekaRibbonLB</module>
+        <module>EurekaClient3</module>
+        <module>EurekaRibbonLB</module>
 		<module>EurekaFeignLB</module>
+		<module>ZuulServiceGateway</module>
     </modules>
 
     <dependencyManagement>
