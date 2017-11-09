@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * User: ROOT
  * Date: 2017/11/6 22:07
  */
-@FeignClient(value = "eureka-client")
+@FeignClient(value = "eureka-client", fallback = PersonClientHystrix.class)
 public interface PersonFeignClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/person")
