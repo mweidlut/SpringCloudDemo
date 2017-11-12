@@ -30,7 +30,7 @@ public class PersonService2Controller {
 
         logger.info("/person, host:{}, service_id:{}, result:{}", instance.getHost(), instance.getServiceId(), r);
 
-        return "From Person Service, Result is " + r;
+        return "From Person Service-2, Result is " + r;
     }
 
 }
