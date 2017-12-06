@@ -22,6 +22,7 @@
     </properties>
 
     <modules>
+        <module>ConfigServer</module>
         <module>EurekaServer1</module>
         <module>EurekaServer2</module>
         <module>EurekaClient1</module>
