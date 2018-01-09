@@ -12,10 +12,10 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableConfigServer
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ConfigServerApplication {
+public class ConfigServer2Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConfigServerApplication.class, args);
+        SpringApplication.run(ConfigServer2Application.class, args);
 
         //http://localhost:7777/app-name/profile-name/branch-name
         //start then access   http://localhost:7777/config-server/prod/config-test
