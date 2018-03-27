@@ -2,6 +2,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * User: ROOT
@@ -9,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @ComponentScan("org.test.cloud")
 @EnableDiscoveryClient
+@PropertySource(value = "classpath:/*.yml", ignoreResourceNotFound = true)
 @SpringCloudApplication
 public class EurekaClient2Application {
 

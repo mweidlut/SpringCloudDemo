@@ -1,0 +1,52 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true     # 重试机制
+
+server:
+  port: 16666
+
+#Zuul的默认路由规则如下：http://ZUUL_HOST:ZUUL_PORT/MAPPING-URI/** 会被转发到serviceId对应的微服务
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: eureka-client
+    api-b:
+      path: /api-b/**
+      serviceId: eureka-client-3
+    client-1:
+      url: http://localhost:3001/
+  retryable: true  #开启重试
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka2:2222/eureka/,http://eureka1:1111/eureka/
+
+#断路器
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 30000  #hystrix超时时间31秒钟,需要大于ribbon的超时时间,不然不会触发重试
+ribbon:
+  eureka:
+    enabled: true
+#  ServerListRefreshInterval: 2000 #LoadBalancer Refresh，默认30秒
+
+eureka-client:
+  ribbon:
+    ActiveConnectionsLimit: 500
+    ReadTimeout: 10000
+    ConnectTimeout: 5000
+    OkToRetryOnAllOperations: true
+    MaxAutoRetries: 1
+    MaxAutoRetriesNextServer: 2

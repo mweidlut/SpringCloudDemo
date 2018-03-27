@@ -2,6 +2,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * User: ROOT
@@ -9,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @ComponentScan("org.test.cloud")
 @EnableEurekaServer
+@PropertySource(value = "classpath:/*.yml", ignoreResourceNotFound = true)
 @SpringCloudApplication
 public class EurekaServer1Application {
 

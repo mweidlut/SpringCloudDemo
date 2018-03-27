@@ -21,6 +21,13 @@
             <artifactId>spring-cloud-starter-zuul</artifactId>
         </dependency>
 
+        <!-- spring-retry -->
+        <dependency>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
+            <version>1.2.2.RELEASE</version>
+        </dependency>
+
     </dependencies>
 
 

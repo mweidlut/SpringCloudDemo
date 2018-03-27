@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: eureka-client
+server:
+  port: 3001
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2222/eureka/,http://localhost:1111/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 1  #instance到server的刷新周期
+    lease-expiration-duration-in-seconds: 2   #server等待的超时时间
