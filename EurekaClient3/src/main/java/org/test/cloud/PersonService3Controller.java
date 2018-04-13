@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * User: ROOT
@@ -21,6 +22,8 @@ public class PersonService3Controller {
 
     @Autowired
     private DiscoveryClient client;
+    @Autowired
+    private RestTemplate restTemplate;
 
 
     @RequestMapping(value = "/person", method = RequestMethod.GET)
@@ -30,7 +33,20 @@ public class PersonService3Controller {
 
         logger.info("/person, host:{}, service_id:{}, result:{}", instance.getHost(), instance.getServiceId(), r);
 
+        this.callOtherServiceByServiceId(firstname, lastname);
+
         return "From Person Service-3, Result is " + r;
+    }
+
+    private void callOtherServiceByServiceId(String firstname, String lastname){
+
+        String requestUrl = "http://EUREKA-CLIENT/person?firstname=%s&lastname=%s";
+        String urlWithParam = String.format(requestUrl, firstname, lastname);
+
+        String result =  restTemplate.getForEntity(urlWithParam, String.class)
+                .getBody();
+
+        logger.info("Service-3 calling...EUREKA-CLIENT....and result = {}", result);
     }
 
 }
