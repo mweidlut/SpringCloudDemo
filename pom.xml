@@ -33,6 +33,8 @@
         <module>EurekaRibbonLB</module>
 		<module>EurekaFeignLB</module>
 		<module>ZuulServiceGateway</module>
+        <module>StreamConsumer</module>
+        <module>StreamProducer</module>
     </modules>
 
     <dependencyManagement>

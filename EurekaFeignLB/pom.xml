@@ -13,7 +13,7 @@
 
     <artifactId>eureka-feign-lb</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <dependencies>
 

@@ -1,22 +1,19 @@
+package org.test.stream;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
-import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 
 /**
- * User: ROOT
- * Date: 2017/11/1 21:50
+ * Stream生产者
+ * User: weimeng
+ * Date: 2018/9/12 15:34
  */
-@EnableEurekaServer
 @PropertySource(value = "classpath:/*.yml", ignoreResourceNotFound = true)
 @SpringCloudApplication
-public class EurekaServer2Application {
+public class StreamProducerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServer2Application.class, args);
+        SpringApplication.run(StreamProducerApplication.class, args);
     }
-
-
 }
-

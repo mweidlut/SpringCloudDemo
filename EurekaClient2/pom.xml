@@ -13,7 +13,7 @@
 
     <artifactId>eureka-client-2</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <dependencies>
 
