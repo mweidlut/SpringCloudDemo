@@ -16,7 +16,8 @@ public class MessageListener {
 
     @StreamListener(Sink.INPUT)
     public void input(Message<Company> message) {
-        logger.warn("【*** 消息接收 ***】==>{}", message.getPayload());
+        Company payload = message.getPayload();
+        logger.warn("【*** 消息接收 ***】==>{}", payload);
     }
 
 }
