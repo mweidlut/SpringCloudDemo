@@ -11,9 +11,9 @@ spring:
           environment: # 设置rabbitmq的相关的环境配置
             spring:
               rabbitmq:
-                addresses: 10.139.60.131:5672
-                username: kkuser
-                password: kkuser123
+                addresses: 127.0.0.1:5672
+                username: guest
+                password: guest
                 virtual-host: /
       bindings: # 服务的整合处理
         output: # 这个名字是一个通道的名称，在分析具体源代码的时候会进行说明
