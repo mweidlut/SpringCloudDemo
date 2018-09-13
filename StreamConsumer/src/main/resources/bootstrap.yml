@@ -1,9 +1,18 @@
 server:
   port: 4002
+
 spring:
   application:
     name: stream-consumer
   cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-server
+      fail-fast: true
+      label: master
+      profile: test
+#      uri: http://localhost:7777 #for health check
     stream:
       binders: # 在此处配置要绑定的rabbitmq的服务信息
         defaultRabbit: # 表示定义的名称，用于于binding整合
@@ -15,16 +24,30 @@ spring:
                 username: guest
                 password: guest
                 virtual-host: /
+        cloudBusRabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                addresses: 10.139.60.131:5672
+                username: kkuser
+                password: kkuser123
+                virtual-host: /
       bindings: # 服务的整合处理
         input: # 这个名字是一个通道的名称，在分析具体源代码的时候会进行说明
           destination: streamDemoExchange # 表示要使用的Exchange名称定义
           content-type: application/json # 设置消息类型，本次为对象json，如果是文本则设置“text/plain”
           binder: defaultRabbit # 设置要绑定的消息服务的具体设置
+        springCloudBusInput:
+          destination: springCloudBus
+          binder: cloudBusRabbit
+      default-binder: cloudBusRabbit
+
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka1:1111/eureka/
+      defaultZone: http://eureka2:2222/eureka/,http://eureka1:1111/eureka/
   instance:
     lease-renewal-interval-in-seconds: 2 # 设置心跳的时间间隔（默认是30秒）
     lease-expiration-duration-in-seconds: 5 # 如果现在超过了5秒的间隔（默认是90秒）

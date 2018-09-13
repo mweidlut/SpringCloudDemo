@@ -1,0 +1,16 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka2:2222/eureka/,http://eureka1:1111/eureka/
+server:
+  port: 7001
+spring:
+  application:
+    name: configsample
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        serviceId: config-server
+      label: master
+      profile: test

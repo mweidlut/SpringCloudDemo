@@ -1,14 +1,16 @@
+package org.test.config;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.config.server.EnableConfigServer;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
 
 /**
  * User: ROOT
  * Date: 2017/12/6 22:24
  */
-@ComponentScan("org.test.cloud")
+@PropertySource(value = "classpath:/*.yml", ignoreResourceNotFound = true)
 @EnableConfigServer
 @EnableDiscoveryClient
 @SpringBootApplication
