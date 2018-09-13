@@ -24,7 +24,7 @@ public class TestController {
     @PostMapping("/company/{name}")
     public void test(@PathVariable String name){
 
-        logger.info("接收到公司名称：{}", name);
+        logger.info("发送公司名称：{}", name);
 
         Company company = new Company(name);
         messageProvider.send(company);

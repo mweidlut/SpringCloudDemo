@@ -24,7 +24,7 @@ spring:
         git:
           clone-on-start: true
           username: mweidlut
-          password: 'langrage444' #TODO
+          password: 'yourPWD'
           searchPaths: /config-repo
           uri: https://github.com/mweidlut/SpringCloudDemoConfigCenter.git
     bus:
